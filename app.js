@@ -118,11 +118,13 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(testArray){ //eslint-disable-line
-  var numbersProduct = sum(testArray[0], testArray[1]);
+  var numbersProduct = multiply(testArray[0], testArray[1]);
   // console.log(numbersSum);
-  numbersProduct = sum(numbersProduct[0], testArray[2]);
-  console.log(numbersProduct[0]);
-  var secondElement = (testArray  + ' was passed in as an array of numbers, and ' + numbersProduct[0] + ' is their sum.');
+  numbersProduct = multiply(numbersProduct[0], testArray[2]);
+  console.log('numbersProduct[0] is ' + numbersProduct[0]);
+  console.log('testArray is ' + testArray[2]);
+
+  var secondElement = ('The numbers ' + testArray  + ' have a product of ' + numbersProduct[0] + '.');
   console.log(secondElement);
   return[numbersProduct[0], secondElement];
 }
