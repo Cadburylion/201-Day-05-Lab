@@ -60,27 +60,25 @@ Test this function by hand in the console to get it working, and when you think 
 function sumAndMultiply(a,b,c){ //eslint-disable-line
   var numberSum = sum(a, b);
   // console.log(numberSum);
-  numberSum = sum(numberSum[0], c)[0];
+  numberSum = sum(numberSum[0], c);
   // console.log(numberSum);
   var numberProduct = multiply(a, b);
   // console.log(numberProduct);
-  numberProduct = multiply(numberProduct[0], c)[0];
+  numberProduct = multiply(numberProduct[0], c);
   // console.log(numberProduct);
 
-  var sumResult = (a + ' and ' + b + ' and ' + c + ' sum to ' + numberSum + '.');
+  var sumResult = (a + ' and ' + b + ' and ' + c + ' sum to ' + numberSum[0] + '.');
   // console.log(sumResult);
-  var productResult = ('The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + numberProduct + '.');
+  var productResult = ('The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + numberProduct[0] + '.');
   // return[sumResult, productResult];
   // console.log(productResult);
 // The product of 4 and 7 and 5 is 140."
-  var testArray = [numberSum, numberProduct, sumResult, productResult];
+  var sumAndProductArray = [numberSum[0], numberProduct[0], sumResult, productResult];
   // console.log(testArray);
-  return testArray;
+  return sumAndProductArray;
 }
 
 
-// Write a function called sumAndMultiply() that takes in three numbers as separate arguments and returns an array where the first element is the sum of those three numbers, the second element is the product of those three numbers,  and the third and fourth elements are strings that EXACTLY follow this example and use the values that were input into the function:
-// Here is the test for sumAndMultiply(); uncomment it to run it
 testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
@@ -96,12 +94,18 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2,3,4]; //eslint-disable-line
 
 function sumArray(testArray){ //eslint-disable-line
-
+  var numbersSum = sum(testArray[0], testArray[1]);
+  // console.log(numbersSum);
+  numbersSum = sum(numbersSum[0], testArray[2]);
+  console.log(numbersSum[0]);
+  var secondElement = (testArray  + ' was passed in as an array of numbers, and ' + numbersSum[0] + ' is their sum.');
+  console.log(secondElement);
+  return[numbersSum[0], secondElement];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
