@@ -121,11 +121,11 @@ function multiplyArray(testArray){ //eslint-disable-line
   var numbersProduct = multiply(testArray[0], testArray[1]);
   // console.log(numbersSum);
   numbersProduct = multiply(numbersProduct[0], testArray[2]);
-  console.log('numbersProduct[0] is ' + numbersProduct[0]);
-  console.log('testArray is ' + testArray[2]);
+  // console.log('numbersProduct[0] is ' + numbersProduct[0]);
+  // console.log('testArray is ' + testArray[2]);
 
   var secondElement = ('The numbers ' + testArray  + ' have a product of ' + numbersProduct[0] + '.');
-  console.log(secondElement);
+  // console.log(secondElement);
   return[numbersProduct[0], secondElement];
 }
 
